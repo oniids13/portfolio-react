@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../styles/Projects.css";
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
   const projects = [
     {
       id: 1,
@@ -30,7 +30,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects">
+    <section id="projects" ref={ref}>
       <h2 className="section-title">My Projects</h2>
       <div className="projects-container">
         {projects.map((project) => (
@@ -62,6 +62,6 @@ const Projects = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Projects;

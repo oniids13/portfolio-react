@@ -59,14 +59,47 @@
   transition: all 0.3s ease;
 }
 
+.resume-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .cta-button:hover {
   background-color: #2980b9;
   transform: translateY(-3px);
 }
 
+.header-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-button,
+  .resume-button {
+    width: 100%;
     text-align: center;
   }
 
