@@ -32,7 +32,11 @@ const Header = ({ scrollToProjects }) => {
           </div>
         </div>
         <div className="header-image">
-          <img src="/Portfolio_pic.png" alt="Profile" className="profile-img" />
+          <img
+            src="images/Portfolio_pic.png"
+            alt="Profile"
+            className="profile-img"
+          />
         </div>
       </div>
     </header>
