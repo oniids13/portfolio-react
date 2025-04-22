@@ -4,7 +4,7 @@ const projects = [
     title: "E-commerce Project (My Fake Shop)",
     description:
       "A responsive e-commerce frontend built with React and Vite, featuring a multi-page layout powered by react-router-dom. Users can browse products, add items to their cart, and navigate seamlessly between pages. This project showcases proficiency in modern React development and client-side routing.",
-    technologies: ["React", "Vite", "CSS3", "HTML5"],
+    technologies: ["React", "Vite", "CSS3", "Bootstrap", "HTML5"],
     image: "images/sample-ecommerce-project.vercel.app_store.png",
     link: "https://sample-ecommerce-project.vercel.app/",
     source: "https://github.com/oniids13/shopping-cart",
@@ -43,6 +43,24 @@ const projects = [
     image: "images/cv-maker-gamma-pied.vercel.app_.png",
     link: "https://cv-maker-gamma-pied.vercel.app/",
     source: "https://github.com/oniids13/cv-maker",
+  },
+  {
+    id: 5,
+    title: "Inventory Management System",
+    description:
+      "The Inventory App is a web application designed to help businesses or individuals manage their inventory. It allows users to easily track the quantity, price, and details of items in stock. User can also filter items based on category and search items on the list. This project is built with Node.js, Express, and EJS for the frontend, offering a user-friendly interface to add, update, and delete inventory items. The app also features a PostgreSQL database for data storage, ensuring efficient and reliable management of inventory information. This project demonstrates proficiency in backend development, database integration, and responsive design principles.",
+    technologies: [
+      "NodeJS",
+      "ExpressJS",
+      "PostgreSQL",
+      "JavaScript",
+      "CSS3",
+      "Bootstrap",
+      "HTML5",
+    ],
+    image: "images/inventory-app.png",
+    link: "https://inventory-app-production-c73b.up.railway.app/",
+    source: "https://github.com/oniids13/inventory-app",
   },
 ];
 
