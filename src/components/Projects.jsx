@@ -1,34 +1,8 @@
 import React, { forwardRef } from "react";
 import "../styles/Projects.css";
+import projects from "../data/projects"; // Assuming you have a projects.js file in data folder
 
 const Projects = forwardRef((props, ref) => {
-  const projects = [
-    {
-      id: 1,
-      title: "E-commerce Platform",
-      description:
-        "A full-stack e-commerce application with React frontend, Node.js backend, and MongoDB database. Features include user authentication, product catalog, shopping cart, and payment processing.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-      image: "https://via.placeholder.com/600x400",
-    },
-    {
-      id: 2,
-      title: "Task Management App",
-      description:
-        "A productivity application for managing tasks and projects. Includes features like task categorization, due date tracking, and team collaboration.",
-      technologies: ["React", "Firebase", "Material UI", "Redux"],
-      image: "https://via.placeholder.com/600x400",
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description:
-        "A weather application that displays current conditions and forecasts using data from a weather API. Includes location search and temperature unit conversion.",
-      technologies: ["JavaScript", "OpenWeather API", "CSS3", "HTML5"],
-      image: "https://via.placeholder.com/600x400",
-    },
-  ];
-
   return (
     <section id="projects" ref={ref}>
       <h2 className="section-title">My Projects</h2>
@@ -46,10 +20,20 @@ const Projects = forwardRef((props, ref) => {
                 ))}
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">
+                <a
+                  href={project.link}
+                  className="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   View Project
                 </a>
-                <a href="#" className="project-link">
+                <a
+                  href={project.source}
+                  className="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Source Code
                 </a>
               </div>
