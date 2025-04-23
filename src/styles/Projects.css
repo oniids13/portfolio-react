@@ -83,6 +83,25 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.github-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin: 0px 20%;
+}
+.social-link {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .project-card {
     grid-template-columns: 1fr;

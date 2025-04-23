@@ -3,7 +3,7 @@ import "../styles/TechStack.css";
 
 const TechStack = () => {
   const technologies = {
-    frontend: ["React", "HTML", "CSS", "JavaScript", "Bootstrap"],
+    frontend: ["React", "HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind"],
     backend: ["Node.js", "Express.js", "Flask", "Python"],
     databases: ["PostgreSQL", "SQLite", "MongoDB"],
     others: ["Git", "Postman", "PrismaORM"],

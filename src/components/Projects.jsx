@@ -44,6 +44,16 @@ const Projects = forwardRef((props, ref) => {
           </div>
         ))}
       </div>
+      <div className="github-link">
+        For more projects, check out my GitHub profile.
+        <a
+          href="https://github.com/oniids13"
+          className="social-link"
+          target="_blank"
+        >
+          <i className="fab fa-github"></i>
+        </a>
+      </div>
     </section>
   );
 });

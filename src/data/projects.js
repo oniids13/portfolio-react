@@ -4,7 +4,7 @@ const projects = [
     title: "E-commerce Project (My Fake Shop)",
     description:
       "A responsive e-commerce frontend built with React and Vite, featuring a multi-page layout powered by react-router-dom. Users can browse products, add items to their cart, and navigate seamlessly between pages. This project showcases proficiency in modern React development and client-side routing.",
-    technologies: ["React", "Vite", "CSS3", "Bootstrap", "HTML5"],
+    technologies: ["React", "JavaScript", "CSS3", "Bootstrap", "HTML5"],
     image: "images/sample-ecommerce-project.vercel.app_store.png",
     link: "https://sample-ecommerce-project.vercel.app/",
     source: "https://github.com/oniids13/shopping-cart",

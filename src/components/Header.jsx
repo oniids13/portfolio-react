@@ -4,7 +4,7 @@ import "../styles/Header.css"; // Adjust the path as necessary
 const Header = ({ scrollToProjects }) => {
   // Replace with the actual path to your resume PDF
   const resumeUrl =
-    "https://drive.google.com/file/d/16BJ9i6lbEYXkBSxX4FwkkDhc8SFjZoTb/view?usp=sharing";
+    "https://drive.google.com/file/d/1zC-hTSxQWczuoqC3L_SB6Ef6-1c5fdCy/view?usp=sharing";
 
   return (
     <header className="header-section">
@@ -13,9 +13,10 @@ const Header = ({ scrollToProjects }) => {
           <h1>Jose Dino Abaya</h1>
           <h2>Web Developer / Programmer</h2>
           <p>
-            I build beautiful, responsive, and user-friendly web applications
-            with modern technologies. Passionate about creating efficient
-            solutions and continuously learning new skills.
+            A runner, gamer, cat dad, and passoniate developer. I build
+            beautiful, responsive, and user-friendly web applications with
+            modern technologies. Passionate about creating efficient solutions
+            and continuously learning new skills.
           </p>
           <div className="header-buttons">
             <button className="cta-button" onClick={scrollToProjects}>
@@ -27,7 +28,7 @@ const Header = ({ scrollToProjects }) => {
               rel="noopener noreferrer"
               className="resume-button"
             >
-              View my Resume
+              View My Resume
             </a>
           </div>
         </div>
