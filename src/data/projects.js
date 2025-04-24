@@ -62,6 +62,24 @@ const projects = [
     link: "https://inventory-app-production-c73b.up.railway.app/",
     source: "https://github.com/oniids13/inventory-app",
   },
+  {
+    id: 6,
+    title: "Movie and TV shows API website",
+    description:
+      "A clean, responsive movie browser that fetches trending and popular titles using the TMDB API and searches for movies and tv shows. Built with NodeJS and ExpressJS, the app allows users to search for movies, view detailed info, and explore film posters with a smooth, dynamic UI. This project sharpened my API handling skills and improved my UI/UX design implementation using EJS template and Bootstrap.",
+    technologies: [
+      "NodeJS",
+      "ExpressJS",
+      "JavaScript",
+      "CSS3",
+      "Bootstrap",
+      "HTML5",
+      "TMDB API",
+    ],
+    image: "images/apimoviewebsite.png",
+    link: "https://apimoviewebsite-production.up.railway.app/movies",
+    source: "https://github.com/oniids13/API_movie_website",
+  },
 ];
 
 export default projects;
