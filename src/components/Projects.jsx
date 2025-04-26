@@ -39,7 +39,9 @@ const Projects = forwardRef((props, ref) => {
               </div>
             </div>
             <div className="project-image">
-              <img src={project.image} alt={project.title} />
+              <a href={project.image} target="_blank">
+                <img src={project.image} alt={project.title} />
+              </a>
             </div>
           </div>
         ))}
