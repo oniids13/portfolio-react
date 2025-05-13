@@ -6,7 +6,15 @@ const TechStack = () => {
     frontend: ["React", "HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind"],
     backend: ["Node.js", "Express.js", "Flask", "Python"],
     databases: ["PostgreSQL", "SQLite", "MongoDB"],
-    others: ["Git", "Postman", "PrismaORM", "VS Code", "Cursor AI"],
+    others: [
+      "Git",
+      "Postman",
+      "PrismaORM",
+      "VS Code",
+      "Cursor AI",
+      "AI Prompting",
+      "LLM Interaction",
+    ],
   };
 
   return (
