@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/Header.css"; // Adjust the path as necessary
 
 const Header = ({ scrollToProjects }) => {
@@ -6,21 +6,44 @@ const Header = ({ scrollToProjects }) => {
   const resumeUrl =
     "https://drive.google.com/file/d/1zC-hTSxQWczuoqC3L_SB6Ef6-1c5fdCy/view?usp=sharing";
 
+  const nameRef = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const buttonsRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    // Subtle fade-in animations on load
+    const elements = [nameRef, titleRef, descRef, buttonsRef, imageRef];
+    elements.forEach((el, index) => {
+      if (el.current) {
+        el.current.style.opacity = 0;
+        setTimeout(() => {
+          el.current.style.opacity = 1;
+        }, 300 + index * 200);
+      }
+    });
+  }, []);
+
   return (
     <header className="header-section">
       <div className="header-content">
         <div className="header-text">
-          <h1>Jose Dino Abaya</h1>
-          <h2>Web Developer / Programmer</h2>
-          <p>
-            A runner, gamer, cat dad, and passoniate developer. I build
-            beautiful, responsive, and user-friendly web applications with
-            modern technologies. Passionate about creating efficient solutions
-            and continuously learning new skills.
+          <h1 ref={nameRef} className="animate-element">
+            Jose Dino Abaya
+          </h1>
+          <h2 ref={titleRef} className="animate-element">
+            Web Developer & Programmer
+          </h2>
+          <p ref={descRef} className="animate-element">
+            A passionate developer crafting responsive, user-friendly web
+            applications with modern technologies. Dedicated to delivering
+            efficient solutions while continuously expanding my skill set in the
+            ever-evolving tech landscape.
           </p>
-          <div className="header-buttons">
+          <div ref={buttonsRef} className="header-buttons animate-element">
             <button className="cta-button" onClick={scrollToProjects}>
-              View My Work
+              View Portfolio
             </button>
             <a
               href={resumeUrl}
@@ -28,16 +51,18 @@ const Header = ({ scrollToProjects }) => {
               rel="noopener noreferrer"
               className="resume-button"
             >
-              View My Resume
+              Resume
             </a>
           </div>
         </div>
-        <div className="header-image">
-          <img
-            src="images/Portfolio_pic.png"
-            alt="Profile"
-            className="profile-img"
-          />
+        <div ref={imageRef} className="header-image animate-element">
+          <div className="image-container">
+            <img
+              src="images/Portfolio_pic.png"
+              alt="Profile"
+              className="profile-img"
+            />
+          </div>
         </div>
       </div>
     </header>

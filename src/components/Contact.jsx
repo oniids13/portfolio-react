@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [focusedInput, setFocusedInput] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <section id="contact">
-      <h2 className="section-title">Get In Touch</h2>
+      <h2 className="section-title">Contact</h2>
+
       <div className="contact-container">
         <div className="contact-info">
-          <h3>Contact Information</h3>
+          <h3>Let's Connect</h3>
           <p>
-            If you're interested hiring me, feel free to send me a message. I am
-            excited to work with you!
+            I'm currently open to new opportunities. Whether you have a question
+            or just want to say hello, I'll do my best to get back to you!
           </p>
 
           <div className="contact-details">
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
-              <span>jdino.abaya@gmail.com</span>
+              <a href="mailto:jdino.abaya@gmail.com">jdino.abaya@gmail.com</a>
             </div>
             <div className="contact-item">
               <i className="fas fa-phone"></i>
-              <span>+63 939 567 4339</span>
+              <a href="tel:+639395674339">+63 939 567 4339</a>
             </div>
             <div className="contact-item">
               <i className="fas fa-map-marker-alt"></i>
@@ -33,22 +51,36 @@ const Contact = () => {
               href="https://github.com/oniids13"
               className="social-link"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
             >
               <i className="fab fa-github"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/oniids/"
               className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a
               href="https://www.facebook.com/oniids.abaya"
               className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
             >
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/oniids/" className="social-link">
+            <a
+              href="https://www.instagram.com/oniids/"
+              className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <i className="fab fa-instagram"></i>
             </a>
           </div>
@@ -59,30 +91,80 @@ const Contact = () => {
           method="POST"
           className="contact-form"
         >
-          <div className="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
-          </div>
-          <div className="form-group">
+          <div
+            className={`form-group ${
+              focusedInput === "name" || formData.name ? "active" : ""
+            }`}
+          >
             <input
-              type="email"
-              name="_replyto"
-              placeholder="Your Email"
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              onFocus={() => setFocusedInput("name")}
+              onBlur={() => setFocusedInput(null)}
               required
             />
+            <label htmlFor="name">Your Name</label>
           </div>
-          <div className="form-group">
-            <input type="text" name="subject" placeholder="Subject" />
+
+          <div
+            className={`form-group ${
+              focusedInput === "email" || formData.email ? "active" : ""
+            }`}
+          >
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              value={formData.email}
+              onChange={handleChange}
+              onFocus={() => setFocusedInput("email")}
+              onBlur={() => setFocusedInput(null)}
+              required
+            />
+            <label htmlFor="email">Your Email</label>
           </div>
-          <div className="form-group">
+
+          <div
+            className={`form-group ${
+              focusedInput === "subject" || formData.subject ? "active" : ""
+            }`}
+          >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              onFocus={() => setFocusedInput("subject")}
+              onBlur={() => setFocusedInput(null)}
+            />
+            <label htmlFor="subject">Subject</label>
+          </div>
+
+          <div
+            className={`form-group ${
+              focusedInput === "message" || formData.message ? "active" : ""
+            }`}
+          >
             <textarea
+              id="message"
               name="message"
-              placeholder="Your Message"
               rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              onFocus={() => setFocusedInput("message")}
+              onBlur={() => setFocusedInput(null)}
               required
             ></textarea>
+            <label htmlFor="message">Your Message</label>
           </div>
+
           <button type="submit" className="submit-btn">
-            Send Message
+            <span>Send Message</span>
+            <i className="fas fa-paper-plane"></i>
           </button>
         </form>
       </div>
