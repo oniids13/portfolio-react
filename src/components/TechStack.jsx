@@ -22,6 +22,8 @@ import {
   SiPostman,
   SiPrisma,
   SiOpenai,
+  SiFigma,
+  SiCanva,
 } from "react-icons/si";
 import { TbBrandTailwind, TbBrain } from "react-icons/tb";
 import { VscCode } from "react-icons/vsc";
@@ -67,6 +69,8 @@ const TechStack = () => {
       { name: "PrismaORM", icon: <SiPrisma className="tech-icon" /> },
       { name: "VS Code", icon: <VscCode className="tech-icon" /> },
       { name: "Cursor AI", icon: <FaLaptopCode className="tech-icon" /> },
+      { name: "Figma", icon: <SiFigma className="tech-icon" /> },
+      { name: "Canva", icon: <SiCanva className="tech-icon" /> },
       {
         name: "AI Prompt Engineering",
         icon: <SiOpenai className="tech-icon" />,

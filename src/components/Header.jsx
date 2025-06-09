@@ -4,7 +4,7 @@ import "../styles/Header.css"; // Adjust the path as necessary
 const Header = ({ scrollToProjects }) => {
   // Replace with the actual path to your resume PDF
   const resumeUrl =
-    "https://drive.google.com/file/d/1zC-hTSxQWczuoqC3L_SB6Ef6-1c5fdCy/view?usp=sharing";
+    "https://drive.google.com/file/d/1atbQ27P2Y2P4tAEPTfS4wjDW2iN8nI4Q/view?usp=sharing";
 
   const nameRef = useRef(null);
   const titleRef = useRef(null);
