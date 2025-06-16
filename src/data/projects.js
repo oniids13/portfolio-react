@@ -1,6 +1,24 @@
 const projects = [
   {
     id: 1,
+    title: "Movie and TV shows API website",
+    description:
+      "A clean, responsive movie browser that fetches trending and popular titles using the TMDB API and searches for movies and tv shows. Built with ReactJS and Vite, the app allows users to search for movies, view detailed info, and explore film posters with a smooth, dynamic UI. This project sharpened my API handling skills and improved my UI/UX design implementation using TailwindCSS.",
+    technologies: [
+      "ReactJS",
+      "Vite",
+      "JavaScript",
+      "CSS3",
+      "TailwindCSS",
+      "HTML5",
+      "TMDB API",
+    ],
+    image: "images/cineverse.png",
+    link: "https://cineverse-nu.vercel.app/",
+    source: "https://github.com/oniids13/cineverse",
+  },
+  {
+    id: 2,
     title: "E-commerce Project (My Fake Shop)",
     description:
       "A responsive e-commerce frontend built with React and Vite, featuring a multi-page layout powered by react-router-dom. Users can browse products, add items to their cart, and navigate seamlessly between pages. This project showcases proficiency in modern React development and client-side routing.",
@@ -8,16 +26,6 @@ const projects = [
     image: "images/sample-ecommerce-project.vercel.app_store.png",
     link: "https://sample-ecommerce-project.vercel.app/",
     source: "https://github.com/oniids13/shopping-cart",
-  },
-  {
-    id: 2,
-    title: "Pokemon Memory Game App",
-    description:
-      "Memory Game is an interactive card-matching game built with React and Vite. Players flip cards to find matching pairs, testing and improving their memory skills. The application features dynamic gameplay, responsive design, and smooth transitions, providing an engaging user experience",
-    technologies: ["React", "JavaScript", "CSS3", "HTML5"],
-    image: "images/memory-game-two-snowy.vercel.app_.png",
-    link: "https://memory-game-two-snowy.vercel.app/",
-    source: "https://github.com/oniids13/memory-game",
   },
   {
     id: 3,
@@ -46,39 +54,13 @@ const projects = [
   },
   {
     id: 5,
-    title: "Inventory Management System",
+    title: "Pokemon Memory Game App",
     description:
-      "The Inventory App is a web application designed to help businesses or individuals manage their inventory. It allows users to easily track the quantity, price, and details of items in stock. User can also filter items based on category and search items on the list. This project is built with Node.js, Express, and EJS for the frontend, offering a user-friendly interface to add, update, and delete inventory items. The app also features a PostgreSQL database for data storage, ensuring efficient and reliable management of inventory information. This project demonstrates proficiency in backend development, database integration, and responsive design principles.",
-    technologies: [
-      "NodeJS",
-      "ExpressJS",
-      "PostgreSQL",
-      "JavaScript",
-      "CSS3",
-      "Bootstrap",
-      "HTML5",
-    ],
-    image: "images/inventory-app.png",
-    link: "https://inventory-app-production-c73b.up.railway.app/",
-    source: "https://github.com/oniids13/inventory-app",
-  },
-  {
-    id: 6,
-    title: "Movie and TV shows API website",
-    description:
-      "A clean, responsive movie browser that fetches trending and popular titles using the TMDB API and searches for movies and tv shows. Built with ReactJS and Vite, the app allows users to search for movies, view detailed info, and explore film posters with a smooth, dynamic UI. This project sharpened my API handling skills and improved my UI/UX design implementation using TailwindCSS.",
-    technologies: [
-      "ReactJS",
-      "Vite",
-      "JavaScript",
-      "CSS3",
-      "TailwindCSS",
-      "HTML5",
-      "TMDB API",
-    ],
-    image: "images/cineverse.png",
-    link: "https://cineverse-nu.vercel.app/",
-    source: "https://github.com/oniids13/cineverse",
+      "Memory Game is an interactive card-matching game built with React and Vite. Players flip cards to find matching pairs, testing and improving their memory skills. The application features dynamic gameplay, responsive design, and smooth transitions, providing an engaging user experience",
+    technologies: ["React", "JavaScript", "CSS3", "HTML5"],
+    image: "images/memory-game-two-snowy.vercel.app_.png",
+    link: "https://memory-game-two-snowy.vercel.app/",
+    source: "https://github.com/oniids13/memory-game",
   },
 ];
 
