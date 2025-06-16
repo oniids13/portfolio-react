@@ -1,5 +1,26 @@
 const projects = [
   {
+    id: 0,
+    title: "KumustaKa - Mental Health Tracker",
+    description:
+      "A comprehensive mental health tracking application designed for junior high school students to monitor their emotional well-being. Features secure mood logging, pattern analysis, and educational resources. Built with modern web technologies and JWT authentication, this capstone project addresses the critical need for mental health awareness tools in educational settings. The app provides data visualization, privacy-focused design, and integration capabilities for school counseling services.",
+    technologies: [
+      "ReactJS",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Passport-JWT",
+      "JavaScript",
+      "Bootstrap",
+      "Chart.js",
+      "HTML5",
+      "CSS3",
+    ],
+    image: "images/kumustaka.png",
+    link: "",
+    source: "https://github.com/oniids13/kumustaKaApp",
+  },
+  {
     id: 1,
     title: "Movie and TV shows API website",
     description:

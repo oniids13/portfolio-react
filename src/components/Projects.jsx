@@ -32,7 +32,7 @@ const Projects = forwardRef((props, ref) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Live
+                      {project.link ? "View Live" : "Coming Soon"}
                     </a>
                     <a
                       href={project.source}
