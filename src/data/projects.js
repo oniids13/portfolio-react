@@ -66,19 +66,19 @@ const projects = [
     id: 6,
     title: "Movie and TV shows API website",
     description:
-      "A clean, responsive movie browser that fetches trending and popular titles using the TMDB API and searches for movies and tv shows. Built with NodeJS and ExpressJS, the app allows users to search for movies, view detailed info, and explore film posters with a smooth, dynamic UI. This project sharpened my API handling skills and improved my UI/UX design implementation using EJS template and Bootstrap.",
+      "A clean, responsive movie browser that fetches trending and popular titles using the TMDB API and searches for movies and tv shows. Built with ReactJS and Vite, the app allows users to search for movies, view detailed info, and explore film posters with a smooth, dynamic UI. This project sharpened my API handling skills and improved my UI/UX design implementation using TailwindCSS.",
     technologies: [
-      "NodeJS",
-      "ExpressJS",
+      "ReactJS",
+      "Vite",
       "JavaScript",
       "CSS3",
-      "Bootstrap",
+      "TailwindCSS",
       "HTML5",
       "TMDB API",
     ],
-    image: "images/apimoviewebsite.png",
-    link: "https://apimoviewebsite-production.up.railway.app/movies",
-    source: "https://github.com/oniids13/API_movie_website",
+    image: "images/cineverse.png",
+    link: "https://cineverse-nu.vercel.app/",
+    source: "https://github.com/oniids13/cineverse",
   },
 ];
 
