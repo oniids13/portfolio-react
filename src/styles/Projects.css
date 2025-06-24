@@ -3,6 +3,11 @@
   padding: 100px 0;
 }
 
+.project-link.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 .projects-container {
   max-width: 1000px;
   margin: 0 auto;

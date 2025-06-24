@@ -1,5 +1,5 @@
 #contact {
-  background-color: var(--light-color);
+  background-color: white;
   padding: 100px 0;
   position: relative;
 }
@@ -16,7 +16,7 @@
     rgba(236, 240, 241, 0.97) 0%,
     rgba(236, 240, 241, 0.9) 100%
   );
-  z-index: 1;
+  z-index: 0;
 }
 
 .contact-container {

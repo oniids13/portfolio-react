@@ -28,7 +28,9 @@ const Projects = forwardRef((props, ref) => {
                   <div className="project-links">
                     <a
                       href={project.link}
-                      className="project-link"
+                      className={
+                        project.link ? "project-link" : "project-link disabled"
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                     >
