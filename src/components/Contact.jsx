@@ -13,9 +13,11 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    // Map _replyto (required by Formspree) to email in our local state
+    const stateKey = name === "_replyto" ? "email" : name;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [stateKey]: value,
     }));
   };
 
