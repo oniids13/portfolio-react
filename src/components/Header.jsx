@@ -112,9 +112,11 @@ const Header = ({ scrollToProjects }) => {
             </h2>
             <p ref={descRef} className="animate-element">
               A passionate developer crafting responsive, user-friendly web
-              applications with modern technologies. Dedicated to delivering
-              efficient solutions while continuously expanding my skill set in
-              the ever-evolving tech landscape.
+              applications with modern technologies. Experienced in full-stack
+              development and UI/UX design, including user research,
+              wireframing, prototyping, and usability testing. Dedicated to
+              delivering efficient, user-centered solutions while continuously
+              expanding my skill set in the ever-evolving tech landscape.
             </p>
             <div ref={buttonsRef} className="header-buttons animate-element">
               <button className="cta-button" onClick={scrollToProjects}>
