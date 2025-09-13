@@ -42,7 +42,7 @@ const projects = [
     description:
       "A responsive e-commerce frontend built with React and Vite, featuring a multi-page layout powered by react-router-dom. Users can browse products, add items to their cart, and navigate seamlessly between pages. This project showcases proficiency in modern React development and client-side routing.",
     technologies: ["React", "JavaScript", "CSS3", "Bootstrap", "HTML5"],
-    image: "images/sample-ecommerce-project.vercel.app_store.png",
+    image: "images/fake-shop.png",
     link: "https://sample-ecommerce-project.vercel.app/",
     source: "https://github.com/oniids13/shopping-cart",
   },
@@ -63,4 +63,16 @@ const projects = [
   },
 ];
 
-export default projects;
+const UI = [
+  {
+    id: 0,
+    title: "PacePal",
+    description:
+      "PacePal is a mobile app concept that helps runners easily schedule, discover, and join group runs by simplifying coordination, boosting motivation, and ensuring safer, more enjoyable running experiences.",
+    technologies: ["Figma", "Canva"],
+    image: "images/pace-pal.png",
+    link: "https://pace-pal-lime.vercel.app/",
+  },
+];
+
+export { projects, UI };

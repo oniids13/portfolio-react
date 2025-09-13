@@ -1,63 +1,60 @@
 import React, { forwardRef, useState } from "react";
 import "../styles/Projects.css";
-import projects from "../data/projects"; // Assuming you have a projects.js file in data folder
+import { projects } from "../data/projects";
 
 const Projects = forwardRef((props, ref) => {
   const [hoveredProject, setHoveredProject] = useState(null);
+  const { hideTitle } = props;
 
   return (
-    <section id="projects" ref={ref}>
-      <h2 className="section-title">Selected Work</h2>
+    <div
+      className={hideTitle ? "projects-wrapper" : "projects-section"}
+      ref={ref}
+    >
+      {!hideTitle && <h2 className="section-title">Selected Work</h2>}
 
       <div className="projects-container">
         {projects.map((project) => (
-          <div
-            className="project-card"
-            key={project.id}
-            onMouseEnter={() => setHoveredProject(project.id)}
-            onMouseLeave={() => setHoveredProject(null)}
-          >
-            <div className="project-image">
-              <div className="image-wrapper">
-                <img src={project.image} alt={project.title} />
-                <div
-                  className={`project-overlay ${
-                    hoveredProject === project.id ? "active" : ""
-                  }`}
-                >
-                  <div className="project-links">
-                    <a
-                      href={project.link}
-                      className={
-                        project.link ? "project-link" : "project-link disabled"
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {project.link ? "View Live" : "Coming Soon"}
-                    </a>
-                    <a
-                      href={project.source}
-                      className="project-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Source Code
-                    </a>
-                  </div>
+          <div className="project-card" key={project.id}>
+            <div className="project-content">
+              <div className="project-image">
+                <div className="image-wrapper">
+                  <img src={project.image} alt={project.title} />
                 </div>
               </div>
-            </div>
 
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-technologies">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-tag">
-                    {tech}
-                  </span>
-                ))}
+              <div className="project-info">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                <div className="project-technologies">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="project-actions">
+                  <a
+                    href={project.link}
+                    className={
+                      project.link
+                        ? "project-view-button"
+                        : "project-view-button disabled"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.link ? "View Live" : "Coming Soon"}
+                  </a>
+                  <a
+                    href={project.source}
+                    className="project-source-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Source Code
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -75,7 +72,7 @@ const Projects = forwardRef((props, ref) => {
           <span>More Projects on GitHub</span>
         </a>
       </div>
-    </section>
+    </div>
   );
 });
 

@@ -119,7 +119,10 @@ const Header = ({ scrollToProjects }) => {
               expanding my skill set in the ever-evolving tech landscape.
             </p>
             <div ref={buttonsRef} className="header-buttons animate-element">
-              <button className="cta-button" onClick={scrollToProjects}>
+              <button
+                className="cta-button"
+                onClick={() => scrollToSection("projects")}
+              >
                 View Portfolio
               </button>
               <a

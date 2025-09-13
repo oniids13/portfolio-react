@@ -1,0 +1,308 @@
+/* UI Projects Styles */
+.ui-projects-wrapper {
+  width: 100%;
+}
+
+.ui-projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ui-project-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(230, 126, 34, 0.1);
+}
+
+.ui-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(230, 126, 34, 0.15);
+  border-color: rgba(230, 126, 34, 0.2);
+}
+
+.ui-project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 400px;
+}
+
+.ui-project-info {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ui-project-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e67e22;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ui-project-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ui-project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ui-project-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.ui-view-button {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-view-button:hover {
+  background: linear-gradient(135deg, #d35400, #e67e22);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(230, 126, 34, 0.4);
+  color: white;
+}
+
+.ui-source-button {
+  background: transparent;
+  color: #e67e22;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #e67e22;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-source-button:hover {
+  background: #e67e22;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+}
+
+.ui-project-image {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ui-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ui-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ui-project-card:hover .ui-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.ui-tech-tag {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(230, 126, 34, 0.25);
+  transition: all 0.3s ease;
+}
+
+.ui-tech-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.35);
+}
+
+.design-profile {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 0;
+}
+
+.figma-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #f24e1e, #ff7262);
+  color: white;
+  padding: 18px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(242, 78, 30, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.figma-button:hover {
+  background: linear-gradient(135deg, #e03e0e, #ff5242);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(242, 78, 30, 0.4);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .ui-project-content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .ui-project-info {
+    padding: 40px 30px;
+    order: 2;
+  }
+
+  .ui-project-image {
+    height: 300px;
+    order: 1;
+  }
+
+  .ui-project-title {
+    font-size: 1.8rem;
+  }
+
+  .ui-project-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ui-projects-container {
+    gap: 40px;
+    padding: 0 15px;
+  }
+
+  .ui-project-info {
+    padding: 30px 20px;
+  }
+
+  .ui-project-title {
+    font-size: 1.6rem;
+  }
+
+  .ui-project-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ui-view-button,
+  .ui-source-button {
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+
+  .figma-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ui-project-info {
+    padding: 25px 15px;
+  }
+
+  .ui-project-title {
+    font-size: 1.4rem;
+  }
+
+  .ui-project-description {
+    font-size: 0.95rem;
+  }
+
+  .ui-tech-tag {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+
+  .ui-view-button,
+  .ui-source-button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for UI projects */
+.ui-project-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.ui-project-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.ui-project-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Alternating layout for visual interest */
+.ui-project-card:nth-child(even) .ui-project-content {
+  direction: rtl;
+}
+
+.ui-project-card:nth-child(even) .ui-project-info {
+  direction: ltr;
+}
+
+@media (max-width: 968px) {
+  .ui-project-card:nth-child(even) .ui-project-content {
+    direction: ltr;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaDribbble } from "react-icons/fa";
 import "../styles/Contact.css";
 
 const Contact = () => {
@@ -84,6 +85,15 @@ const Contact = () => {
               aria-label="Instagram"
             >
               <i className="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://dribbble.com/jose-dino-abaya/"
+              className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Dribble"
+            >
+              <FaDribbble />
             </a>
           </div>
         </div>

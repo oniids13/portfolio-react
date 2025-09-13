@@ -1,24 +1,18 @@
 import Header from "./components/Header";
 import TechStack from "./components/TechStack";
-import Projects from "./components/Projects";
+import ProjectSelector from "./components/Project-selector";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
-import React, { useRef } from "react";
+import React from "react";
 
 function App() {
-  const projectsRef = useRef(null);
-
-  const scrollToProjects = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <>
       <div className="porfolio-container">
-        <Header scrollToProjects={scrollToProjects} />
+        <Header />
         <TechStack />
-        <Projects ref={projectsRef} />
+        <ProjectSelector />
         <Contact />
         <Footer />
       </div>
