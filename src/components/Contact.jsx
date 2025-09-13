@@ -1,27 +1,7 @@
-import React, { useState } from "react";
-import { FaDribbble } from "react-icons/fa";
+import React from "react";
 import "../styles/Contact.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [focusedInput, setFocusedInput] = useState(null);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    // Map _replyto (required by Formspree) to email in our local state
-    const stateKey = name === "_replyto" ? "email" : name;
-    setFormData((prev) => ({
-      ...prev,
-      [stateKey]: value,
-    }));
-  };
-
   return (
     <section id="contact">
       <h2 className="section-title">Contact</h2>
@@ -91,94 +71,22 @@ const Contact = () => {
               className="social-link"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Dribble"
+              aria-label="Dribbble"
             >
-              <FaDribbble />
+              <i className="fab fa-dribbble"></i>
             </a>
           </div>
         </div>
 
-        <form
-          action="https://formspree.io/f/myzwgwya"
-          method="POST"
-          className="contact-form"
-        >
-          <div
-            className={`form-group ${
-              focusedInput === "name" || formData.name ? "active" : ""
-            }`}
-          >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              onFocus={() => setFocusedInput("name")}
-              onBlur={() => setFocusedInput(null)}
-              required
+        <div className="contact-image">
+          <div className="image-wrapper">
+            <img
+              src="images/PIC_SIDE.png"
+              alt="Jose Dino Abaya"
+              className="contact-pic"
             />
-            <label htmlFor="name">Your Name</label>
           </div>
-
-          <div
-            className={`form-group ${
-              focusedInput === "email" || formData.email ? "active" : ""
-            }`}
-          >
-            <input
-              type="email"
-              id="email"
-              name="_replyto"
-              value={formData.email}
-              onChange={handleChange}
-              onFocus={() => setFocusedInput("email")}
-              onBlur={() => setFocusedInput(null)}
-              required
-            />
-            <label htmlFor="email">Your Email</label>
-          </div>
-
-          <div
-            className={`form-group ${
-              focusedInput === "subject" || formData.subject ? "active" : ""
-            }`}
-          >
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              onFocus={() => setFocusedInput("subject")}
-              onBlur={() => setFocusedInput(null)}
-            />
-            <label htmlFor="subject">Subject</label>
-          </div>
-
-          <div
-            className={`form-group ${
-              focusedInput === "message" || formData.message ? "active" : ""
-            }`}
-          >
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              onFocus={() => setFocusedInput("message")}
-              onBlur={() => setFocusedInput(null)}
-              required
-            ></textarea>
-            <label htmlFor="message">Your Message</label>
-          </div>
-
-          <button type="submit" className="submit-btn">
-            <span>Send Message</span>
-            <i className="fas fa-paper-plane"></i>
-          </button>
-        </form>
+        </div>
       </div>
     </section>
   );

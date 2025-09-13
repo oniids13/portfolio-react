@@ -1,9 +1,8 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef } from "react";
 import "../styles/Projects.css";
 import { projects } from "../data/projects";
 
 const Projects = forwardRef((props, ref) => {
-  const [hoveredProject, setHoveredProject] = useState(null);
   const { hideTitle } = props;
 
   return (
@@ -18,7 +17,7 @@ const Projects = forwardRef((props, ref) => {
           <div className="project-card" key={project.id}>
             <div className="project-content">
               <div className="project-image">
-                <div className="image-wrapper">
+                <div className="image-wrapper1">
                   <img src={project.image} alt={project.title} />
                 </div>
               </div>
