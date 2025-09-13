@@ -18,7 +18,7 @@ const ProjectSelector = () => {
               onClick={() => setActiveTab("webdev")}
             >
               <span className="toggle-icon">💻</span>
-              Web Development
+              Web Dev
             </button>
             <button
               className={`toggle-btn ${activeTab === "ui" ? "active" : ""}`}

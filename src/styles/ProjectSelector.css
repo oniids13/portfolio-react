@@ -72,7 +72,7 @@
 }
 
 .toggle-slider.slide-right {
-  transform: translateX(240px);
+  transform: translateX(170px);
   background: linear-gradient(135deg, #e67e22, #d35400);
   box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3), 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -118,7 +118,7 @@
   }
 
   .toggle-slider.slide-right {
-    transform: translateY(50px);
+    transform: translateY(55px);
   }
 
   .project-selector-container {
