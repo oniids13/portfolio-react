@@ -1,6 +1,6 @@
 import Header from "./components/Header";
-import TechStack from "./components/TechStack";
-import ProjectSelector from "./components/Project-selector";
+import Projects from "./components/Projects";
+import UI from "./components/UI";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -9,10 +9,10 @@ import React from "react";
 function App() {
   return (
     <>
-      <div className="porfolio-container">
+      <div className="portfolio-container">
         <Header />
-        <TechStack />
-        <ProjectSelector />
+        <Projects />
+        <UI />
         <Contact />
         <Footer />
       </div>

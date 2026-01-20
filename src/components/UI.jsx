@@ -1,18 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/UI.css";
 import { UI as uiProjects } from "../data/projects";
-import { FaDribbble } from "react-icons/fa";
+import { FaDribbble, FaExternalLinkAlt, FaFigma } from "react-icons/fa";
 
 const UI = () => {
-  const [hoveredProject, setHoveredProject] = useState(null);
-
   return (
-    <div className="ui-projects-wrapper">
+    <section id="uiux-projects" className="ui-section">
+      <h2 className="section-title ui-title">UI/UX Design</h2>
+      <p className="section-subtitle ui-subtitle">
+        User-centered design solutions and creative concepts
+      </p>
+
       <div className="ui-projects-container">
         {uiProjects.map((project, index) => (
-          <div className="ui-project-card" key={project.id}>
+          <div 
+            className="ui-project-card" 
+            key={project.id}
+            style={{ animationDelay: `${index * 0.15}s` }}
+          >
             <div className="ui-project-content">
               <div className="ui-project-info">
+                <div className="ui-badge">
+                  <FaFigma />
+                  <span>Design Project</span>
+                </div>
                 <h3 className="ui-project-title">{project.title}</h3>
                 <p className="ui-project-description">{project.description}</p>
                 <div className="ui-project-technologies">
@@ -25,20 +36,22 @@ const UI = () => {
                 <div className="ui-project-actions">
                   <a
                     href={project.link}
-                    className="ui-view-button"
+                    className="ui-button primary"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View Design Concept
+                    <FaExternalLinkAlt />
+                    <span>View Design</span>
                   </a>
                   {project.source && (
                     <a
                       href={project.source}
-                      className="ui-source-button"
+                      className="ui-button secondary"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Source Files
+                      <FaFigma />
+                      <span>Figma File</span>
                     </a>
                   )}
                 </div>
@@ -47,6 +60,17 @@ const UI = () => {
               <div className="ui-project-image">
                 <div className="ui-image-wrapper">
                   <img src={project.image} alt={project.title} />
+                  <div className="ui-image-overlay">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ui-overlay-link"
+                    >
+                      <FaExternalLinkAlt />
+                      <span>View Project</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -57,15 +81,15 @@ const UI = () => {
       <div className="design-profile">
         <a
           href="https://dribbble.com/jose-dino-abaya"
-          className="figma-button"
+          className="dribbble-button"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>More Designs on Dribble</span>
-          <FaDribbble size={24} color="pink" />
+          <FaDribbble />
+          <span>More Designs on Dribbble</span>
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 
